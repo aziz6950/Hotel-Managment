@@ -1,0 +1,84 @@
+Creating test database for alias 'default' ('file:memorydb_default?mode=memory&cache=shared')...
+Found 47 test(s).
+Operations to perform:
+  Synchronize unmigrated apps: corsheaders, messages, rest_framework, staticfiles
+  Apply all migrations: admin, auth, bookings, contenttypes, rooms, sessions, users
+Synchronizing apps without migrations:
+  Creating tables...
+    Running deferred SQL...
+Running migrations:
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying admin.0003_logentry_add_action_flag_choices... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying auth.0009_alter_user_last_name_max_length... OK
+  Applying auth.0010_alter_group_name_max_length... OK
+  Applying auth.0011_update_proxy_permissions... OK
+  Applying auth.0012_alter_user_first_name_max_length... OK
+  Applying rooms.0001_initial... OK
+  Applying bookings.0001_initial... OK
+  Applying sessions.0001_initial... OK
+  Applying users.0001_initial...test_available_rooms_excludes_booked (bookings.tests.BookingAPITests.test_available_rooms_excludes_booked) ... ok
+test_available_rooms_requires_dates (bookings.tests.BookingAPITests.test_available_rooms_requires_dates) ... ok
+test_booking_requires_login (bookings.tests.BookingAPITests.test_booking_requires_login) ... ok
+test_cancelled_booking_frees_room (bookings.tests.BookingAPITests.test_cancelled_booking_frees_room) ... ok
+test_checkout_before_checkin_rejected (bookings.tests.BookingAPITests.test_checkout_before_checkin_rejected) ... ok
+test_double_booking_rejected (bookings.tests.BookingAPITests.test_double_booking_rejected) ... ok
+test_guest_can_create_booking (bookings.tests.BookingAPITests.test_guest_can_create_booking) ... ok
+test_guest_sees_only_own_bookings (bookings.tests.BookingAPITests.test_guest_sees_only_own_bookings) ... ok
+test_overlapping_dates_rejected (bookings.tests.BookingAPITests.test_overlapping_dates_rejected) ... ok
+test_past_date_rejected (bookings.tests.BookingAPITests.test_past_date_rejected) ... ok
+test_staff_sees_all_bookings (bookings.tests.BookingAPITests.test_staff_sees_all_bookings) ... ok
+test_too_many_guests_rejected (bookings.tests.BookingAPITests.test_too_many_guests_rejected) ... ok
+test_invoice_with_service_and_payment (bookings.tests.InvoiceUnitTests.test_invoice_with_service_and_payment) ... ok
+test_back_to_back_is_allowed (bookings.tests.OverlapUnitTests.test_back_to_back_is_allowed) ... ok
+test_cancelled_booking_does_not_block (bookings.tests.OverlapUnitTests.test_cancelled_booking_does_not_block) ... ok
+test_dates_before_is_allowed (bookings.tests.OverlapUnitTests.test_dates_before_is_allowed) ... ok
+test_other_room_is_free (bookings.tests.OverlapUnitTests.test_other_room_is_free) ... ok
+test_partial_overlap (bookings.tests.OverlapUnitTests.test_partial_overlap) ... ok
+test_same_dates_overlap (bookings.tests.OverlapUnitTests.test_same_dates_overlap) ... ok
+test_cannot_overpay (bookings.tests.PaymentAndStatusTests.test_cannot_overpay) ... ok
+test_checkout_after_full_payment (bookings.tests.PaymentAndStatusTests.test_checkout_after_full_payment) ... ok
+test_checkout_blocked_when_due (bookings.tests.PaymentAndStatusTests.test_checkout_blocked_when_due) ... ok
+test_first_payment_confirms_booking (bookings.tests.PaymentAndStatusTests.test_first_payment_confirms_booking) ... ok
+test_guest_cannot_add_service (bookings.tests.PaymentAndStatusTests.test_guest_cannot_add_service) ... ok
+test_guest_cannot_change_status (bookings.tests.PaymentAndStatusTests.test_guest_cannot_change_status) ... ok
+test_invalid_payment_method_rejected (bookings.tests.PaymentAndStatusTests.test_invalid_payment_method_rejected) ... ok
+test_invalid_status_jump_rejected (bookings.tests.PaymentAndStatusTests.test_invalid_status_jump_rejected) ... ok
+test_staff_can_add_service (bookings.tests.PaymentAndStatusTests.test_staff_can_add_service) ... ok
+test_price_quote (bookings.tests.PriceQuoteAPITests.test_price_quote) ... ok
+test_price_quote_invalid_room (bookings.tests.PriceQuoteAPITests.test_price_quote_invalid_room) ... ok
+test_normal_night_price (bookings.tests.PricingUnitTests.test_normal_night_price) ... ok
+test_peak_and_weekend_price (bookings.tests.PricingUnitTests.test_peak_and_weekend_price) ... ok
+test_peak_season_price (bookings.tests.PricingUnitTests.test_peak_season_price) ... ok
+test_total_for_three_nights (bookings.tests.PricingUnitTests.test_total_for_three_nights) ... ok
+test_weekend_night_price (bookings.tests.PricingUnitTests.test_weekend_night_price) ... ok
+test_complete_hotel_stay (bookings.tests.SystemTest.test_complete_hotel_stay) ... ok
+test_anonymous_cannot_create_room (rooms.tests.RoomAPITests.test_anonymous_cannot_create_room) ... ok
+test_anyone_can_list_rooms (rooms.tests.RoomAPITests.test_anyone_can_list_rooms) ... ok
+test_guest_cannot_create_room (rooms.tests.RoomAPITests.test_guest_cannot_create_room) ... ok
+test_staff_can_create_room (rooms.tests.RoomAPITests.test_staff_can_create_room) ... ok
+test_duplicate_username_rejected (users.tests.AuthAPITests.test_duplicate_username_rejected) ... ok
+test_login_returns_tokens_and_role (users.tests.AuthAPITests.test_login_returns_tokens_and_role) ... ok
+test_me_requires_token (users.tests.AuthAPITests.test_me_requires_token) ... ok
+test_me_with_token (users.tests.AuthAPITests.test_me_with_token) ... ok
+test_register_creates_guest_profile (users.tests.AuthAPITests.test_register_creates_guest_profile) ... ok
+test_weak_password_rejected (users.tests.AuthAPITests.test_weak_password_rejected) ... ok
+test_wrong_password_rejected (users.tests.AuthAPITests.test_wrong_password_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 47 tests in 29.609s
+
+OK
+Destroying test database for alias 'default' ('file:memorydb_default?mode=memory&cache=shared')...
+ OK
+System check identified no issues (0 silenced).
